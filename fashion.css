@@ -65,7 +65,7 @@ body {
 .Text:hover {
      color: sandybrown;
 }
-.item a , .item1 a {
+.item a , .item1 a , .item2 a {
     text-decoration: none;
 }
 .Text {
@@ -76,6 +76,7 @@ body {
     text-align: center;
     margin-top: 500px;
 }
+/* ///////////////////////////////////////////// Pagina pentru barbati*/
 .item:first-child{
     background-image: url(download.jpg);
     overflow: visible;
@@ -99,6 +100,7 @@ body {
     overflow: visible;
     background-size: cover;
 }
+/* /////////////////////////////////////////////Pagina Pentru femei*/ 
 
 .item1:first-child{
     background-image: url(download4.jpg);
@@ -117,11 +119,35 @@ body {
     overflow: visible;
     background-size: cover;
 }
-.item1:nth-child(4)
+.item1:nth-child(4) , .item2:nth-child(4)
 {
     background-image: url(download7.jpg);
     overflow: visible;
     background-size: cover;
 }
 
+/* /////////////////////////////////////////////Pagina Pentru Copii*/ 
 
+.item2:first-child{
+    background-image: url(download8.jpg);
+    overflow: visible;
+    background-size: cover;
+}
+.item2:nth-child(2)
+{
+    background-image: url(download10.jpg);
+    overflow: visible;
+    background-size: cover;
+}
+.item2:nth-child(3)
+{
+    background-image: url(download9.jpg);
+    overflow: visible;
+    background-size: cover;
+}
+.item2:nth-child(4)
+{
+    background-image: url(download7.jpg);
+    overflow: visible;
+    background-size: cover;
+}
