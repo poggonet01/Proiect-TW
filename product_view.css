@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	position: relative;
+}
+
+/* VIEW PRODUCT PAGE */
+.p_container {
+    width: auto;
+    display: grid;  
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    margin: 0 auto 0 auto;
+    justify-content: center;
+    padding: 1% 1% 1% 1%;
+    background-color: #eee;
+    
+}
+.p_info {
+    display: grid;  
+    grid-template-rows: 1fr 1fr; 
+    grid-row-gap: 10px;
+    grid-template-rows: 20% 80%;
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+}
+.p_description {
+    background-color: #fff;
+    margin-bottom: 1px;
+}
+.p_name {
+    background-color: #fff;
+}
+.p_photo {
+    text-align: center;
+    font-family: cursive;
+    font-size: 25px;
+}
+.photo img {
+    margin: 1% 1% 1% 1%;
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid #606060;
+}
+
+/*MENU BAR*/
+
+.logo {
+	font-size: 60px;
+	font-family: Brush Script MT;
+	color : #fff;
+
+}
+.navigation_container{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right:50px;
+    background-color: #808080;
+}
+.nav {
+	list-style-type: none;
+	display: flex;
+}
+.nav li  {
+	margin-right: 50px;
+	font-size: 20px;
+}
+.nav a {
+	text-decoration: none;
+	font-family: Verdana;
+	font-weight: bold;
+	color: #fff;
+}
+.nav a:hover {
+    color: sandybrown;
+}
+
+/* FOOTER */
+
+footer {
+	position: relative;
+  	left: 0;
+  	bottom: 0;
+  	width: 100%;
+  	color: white;
+  	text-align: center;
+  	height: auto;
+  	background: #808080;
+
+}
+footer a{
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	margin-left: 10px;
+	font-family: sans-serif;
+}
+.footer_logo a{
+	font-size: 40px;
+	font-family: Brush Script MT;
+}
+.social img{
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 35px;
+	width: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #606060;
+	border-radius: 10px;
+}
+.footer_bottom {
+	background: #707070;
+	color: #d3d3d3;
+	
+}
