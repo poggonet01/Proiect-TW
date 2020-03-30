@@ -13,11 +13,26 @@
 				<ul class = "nav">
 					<li><a href = "fashion_0.html">MEN</a></li>
 					<li><a href = "fashion_1.html">WOMEN</a></li>
-					<li><a href = "#">CHILDREN</a></li>
+					<li><a href = "fashion_2.html">CHILDREN</a></li>
 					<li class = "child"><a href = "log.html">Sign up | Login</a></li>
 				</ul>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"></button>
+                        <div id="myDropdown" class="dropdown-content"> 
+                                 <a href="fashion_0.html">Men</a>
+                                 <a href="fashion_1.html">Women</a>
+                                 <a href="fashion_2.html">Children</a>
+                                 <a href="log.html">Sign Up | Login</a>
+                        </div>
+                        <script>
+                            function myFunction() {
+                              document.getElementById("myDropdown").classList.toggle("show");
+                            }
+                            </script>
+                    </div>
 			</div>
 		</div>
+           <div class="color">
             <div class="p_container">
                <div class="p_photo">
                Our Model
@@ -34,6 +49,7 @@
                </div>
             </div>
            </div>
+            </div>
            <!-- FOOTER -->
            <footer>
 				<nav>
