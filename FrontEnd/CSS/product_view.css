@@ -6,7 +6,12 @@
 body {
 	position: relative;
 }
-
+.dropdown{
+    display: none;
+}
+.logo {
+    margin: 1px;
+}
 /* VIEW PRODUCT PAGE */
 .p_container {
     width: auto;
