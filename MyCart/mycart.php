@@ -2,13 +2,20 @@
 
 session_start();
 require_once 'connect-phpmyadmin.php';
-if(isset($_POST["add_to_cart"])){
-    require 'add-in-cart.php';
-}
 
-if(isset($_GET["action"])){
-    if($_GET["action"]=="delete"){
-        require 'remove-from-cart.php';
+$session_now=$_SESSION["user-now"];
+$welcome=$_SESSION["username-now"];
+
+if(isset($_SESSION["user-now"])){
+    echo "Welcome {$welcome} to our website :)";
+
+    if(isset($_POST["add_to_cart"])){
+        require 'add-in-cart.php';
+    }
+    else if(isset($_GET["action"])){
+        if($_GET["action"]=="delete"){
+            require 'remove-from-cart.php';
+        }
     }
 }
 
@@ -21,6 +28,42 @@ if(isset($_GET["action"])){
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
     </head> 
     <body>
+        <!---codul html pentru menu bar--->
+        <div class = "navigation_container">
+			<div class="logo">Fashion eShop
+            </div>
+			<div class = "navigation_bar">
+				<ul class = "nav">
+					<li><a href = "fashion_0.html">MEN</a></li>
+					<li><a href = "fashion_1.html">WOMEN</a></li>
+					<li><a href = "fashion_2.html">CHILDREN</a></li>
+					<?php 
+						if (isset($_SESSION['LogOut']))
+						{
+							echo '<li class = "child"><a href = "include/logout.php">'.$_SESSION['LogOut'].'</a></li>';
+						} else 
+						{
+							echo '<li class = "child"><a href = "log.php">'.'Sign Up | Login'.'</a></li>';
+						}
+					?>
+				</ul>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"></button>
+                    <div id="myDropdown" class="dropdown-content"> 
+                        <a href="fashion_0.html">Men</a>
+                        <a href="fashion_1.html">Women</a>
+                        <a href="fashion_2.html">Children</a>
+                        <a href="log.html">Sign Up | Login</a>
+                    </div>
+                    <script>
+                        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-------------------->
         <div class="product_container">
             <h3 align="center">Shopping Cart</h3><br />
             <?php
@@ -64,9 +107,9 @@ if(isset($_GET["action"])){
                     </thead>
                     <?php
                         //---verificam daca sesiunea cos nu e goala atunci afisam in tabelu cos datele stocate in ace
-                        if(!empty($_SESSION["mycart"])){
+                        if(!empty($_SESSION[$session_now])){
                             $total_price=0;
-                            foreach($_SESSION["mycart"] as $keys => $values){
+                            foreach($_SESSION[$session_now] as $keys => $values){
                     ?>
                     <tr>  
                         <td data-label="Item Name"><?php echo $values["product-name"]; ?></td>  
@@ -89,5 +132,25 @@ if(isset($_GET["action"])){
                 </table>
             </div>
         </div>
+        <!---codul html footer--->
+        <footer>
+			<nav>
+				<a href = "fashion_0.html">MEN</a>
+				<a href = "fashion_1.html">WOMEN</a>
+				<a href = "#">CHILDREN</a>
+				<a href = "log.html">Sign up | Login</a>
+			</nav>
+			<div class="footer_logo">
+				<a href = "#">Fashion eShop</a>
+			</div>
+			<div class="social">
+				<a href="#"><img src = "CSS/insta.png"></a>
+				<a href="#"><img src = "CSS/fb.png"></a>
+			</div>
+			<div class="footer_bottom">
+				&copy; Fashion eShop | Designed by Mereuta Ion & Artiom Pogonet
+			</div>
+        </footer>
+        <!-------------------->
     </body>
 </html>
