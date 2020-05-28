@@ -2,6 +2,10 @@
 session_start();
 include_once 'connect-phpmyadmin.php';
 include_once 'getdata.php';
+
+if(isset($_POST["add_to_cart"])){
+    require 'add-in-cart.php';
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,28 +56,39 @@ include_once 'getdata.php';
 		
 		?>
 		<div class="item-container">
-			<table width="100%" class="item-image">
-				<thead>
-					<th>Model</th>
-				</thead>
-				<tr>
-					<td><img  src="<?php echo $data["prd_image"]; ?>" class="img-data" /></td>
-				</tr>
-			</table>
-			<table width="100%" class="item-click">
-				<tr>
-					<th width="50%">Product name</th>
-					<td><?php echo $data["prd_name"]; ?></td>
-				</tr>
-				<tr>
-					<th width="50%">Material</th>
-					<td><?php echo $data["prd_material"]; ?></td>
-				</tr>
-				<tr>
-					<th width="50%">Price</th>
-					<td><?php echo $data["prd_price"]; ?></td>
-				</tr>
-			</table>
+			<form method="post" action="mycart.php?action=add&id=<?php echo $data["ID"]; ?>">
+			
+			 <input type="submit" name="add_to_cart" class='btn-success' value="add+" />  
+
+				<table width="100%" class="item-image">
+					<thead>
+						<th>Model</th>
+					</thead>
+					<tr>
+						<td><img  src="<?php echo $data["prd_image"]; ?>" class="img-data" /></td>
+					</tr>
+				</table>
+				<table width="100%" class="item-click">
+					<tr>
+						<th width="50%">Product name</th>
+						<td><input type="text" name="hidden_name" value="<?php echo $data["prd_name"]; ?>" /></td>
+					</tr>
+					<tr>
+						<th width="50%">Material</th>
+						<td><?php echo $data["prd_material"]; ?></td>
+					</tr>
+					<tr>
+						<th width="50%">Price</th>
+						<td><input type="text" name="hidden_price" value="<?php echo $data["prd_price"]; ?>" /></td>
+					</tr>
+					<tr>
+						<th width="50%">Quantity</th>
+						<td>
+						<input type="text" name="quantity" class="form-product" value="1" />  
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
         
         <!---codul html footer--->
