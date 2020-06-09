@@ -1,0 +1,174 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+
+
+.item-image, .item-click{
+    width:100%;
+    border-collapse:collapse;
+    font-size:20px;
+}
+.item-image th, .item-click th{
+    background-color: cornflowerblue;
+    color: #fff;
+}
+.item-image{
+    background-color:#ccc;
+}
+
+th, td{
+    text-align:center;
+    background-color: #fff;
+    border:1px solid #ddd;
+}
+
+.img-data {
+    max-width:300px;
+    max-height:800px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.btn-success{
+    height: 30px; 
+    width: 100px;
+    border-radius: 6px;
+    color: #fff; 
+    background-color:green;
+    border: none;
+    opacity: 0.7;
+    margin: 0 auto;
+
+}
+
+
+/*-----menu bar-----*/
+
+.dropdown{
+    display:none;
+}
+.logo {
+	font-size: 60px;
+	font-family: Brush Script MT;
+	color : #fff;
+
+}
+.navigation_container{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right:50px;
+    background-color: #808080;
+}
+.nav {
+	list-style-type: none;
+	display: flex;
+}
+.nav li  {
+	margin-right: 50px;
+	font-size: 20px;
+}
+.nav a {
+	text-decoration: none;
+	font-family: Verdana;
+	font-weight: bold;
+	color: #fff;
+}
+.nav a:hover {
+    color: sandybrown;
+}
+/*-----/menu bar-----*/
+
+
+/*-----footer-----*/
+footer {
+	position:relative;
+  	left: 0;
+  	bottom: 0;
+  	width: 100%;
+  	color: white;
+  	text-align: center;
+  	height: auto;
+  	background: #808080;
+
+}
+footer a{
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	margin-left: 10px;
+	font-family: sans-serif;
+}
+.footer_logo a{
+	font-size: 40px;
+	font-family: Brush Script MT;
+}
+.social img{
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 35px;
+	width: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #606060;
+	border-radius: 10px;
+}
+.footer_bottom {
+	background: #707070;
+	color: #d3d3d3;
+	
+}
+/*-----/footer-----*/
+
+@media (max-width: 800px) {
+    .color {
+        display: inline-grid;
+    }
+    .logo {
+        font-size: 50px;
+        margin-left: 70px;
+    }
+    .nav {
+        display: none;
+    }
+    .dropbtn {
+        background-image: url(icon6.png);
+        background-color: cadetblue;
+        background-size: cover;
+        opacity: 0.9;
+        border-radius: 5px;
+        margin-right: 130px;
+        padding: 25px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 180px;
+        overflow: hidden;
+    }
+    .dropdown-content a:hover {
+        color: sandybrown;
+    }
+    .dropdown-content a {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 11px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .show {
+        display: block;
+    }
+}

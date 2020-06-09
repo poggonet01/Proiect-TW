@@ -1,0 +1,145 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body {
+    position: relative;
+    background-image: url(../images/image2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow: scroll;
+}
+.export {
+	height: 30px; 
+    width: 100px;
+    border-radius: 6px;
+    color: #fff; 
+    background-color:green;
+    border: none;
+    opacity: 0.7;
+    margin: 0 auto;
+}
+.product_container{
+    width:700px; 
+    margin:0 auto;
+}
+
+.in-cart{
+    width:100%;
+	border-collapse:collapse;
+	background-color: #fff;
+}
+.in-cart td, .in-cart th{
+    text-align:center;
+    border:1px solid #ddd;
+}
+.in-cart th{
+    background-color: cornflowerblue;
+    color:#ffffff;
+}
+
+/*-----menu bar-----*/
+
+.dropdown{
+    display:none;
+}
+.logo {
+	font-size: 60px;
+	font-family: Brush Script MT;
+	color : #fff;
+
+}
+.navigation_container{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right:50px;
+    background-color: #808080;
+}
+.nav {
+	list-style-type: none;
+	display: flex;
+}
+.nav li  {
+	margin-right: 50px;
+	font-size: 20px;
+}
+.nav a {
+	text-decoration: none;
+	font-family: Verdana;
+	font-weight: bold;
+	color: #fff;
+}
+.nav a:hover {
+    color: sandybrown;
+}
+/*-----/menu bar-----*/
+
+/*-----footer-----*/
+footer {
+	position: fixed;
+    width: 100%;
+  	left: 0;
+  	bottom: 0;
+  	color: white;
+  	text-align: center;
+	background: #808080;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	margin-left: 10px;
+	font-family: sans-serif;
+}
+.footer_logo a{
+	font-size: 40px;
+	font-family: Brush Script MT;
+}
+.social img{
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 35px;
+	width: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #606060;
+	border-radius: 10px;
+}
+.footer_bottom {
+	background: #707070;
+	color: #d3d3d3;
+	
+}
+/*-----/footer-----*/
+
+/*facem tabelu cos responsive*/
+@media(max-width: 800px){
+    .in-cart thead{
+        display:none;
+    }
+    .in-cart, .in-cart tbody, .in-cart td, .in-cart tr{
+        display:block;
+        width: 90%;
+    }
+    .in-cart tr{
+        margin-bottom:15px;
+    }
+    .in-cart{
+        text-align:left;
+        padding-left: 50%;
+        position:relative;
+    }
+    .in-cart td::before{
+        content: attr(data-label);
+        position: absolute;
+        left:0;
+        width: 50%;
+        padding-left: 15px;
+    }
+}
